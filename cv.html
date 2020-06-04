@@ -10,51 +10,55 @@
 		<link href="https://fonts.googleapis.com/css?family=Lato:400,700,900|Oswald:400,300,700" rel="stylesheet" type="text/css">
 		<style type="text/css">
 			*{box-sizing:border-box;margin:0;padding:0;border:0}
-			.wrapper{width:100%;max-width:64rem;margin:0 auto;padding:2rem;background:#fff}
-			.grid{font-size:0}
-			.grid>*{display:inline-block;vertical-align:top}
-			.grid>*{width:70%;margin:0 0 2rem}
-			.grid>*:nth-child(odd){width:30%;text-align:right;padding-right:2rem}
-			.grid>*:nth-child(-n+2){padding-top:0}
-			.sep{position:relative;border-bottom:2px solid #ccc;vertical-align:bottom;top:-4px}
-			.date{color:#666}
-			.hidden{display:none}
-			body{background:#f5f5f5;color:#111;font-family:'Lato',sans-serif;line-height:1.5rem;padding:2rem}
+			body{background:#f5f5f5;color:#111;font-family:'Lato',sans-serif;line-height:1.5rem;padding:1rem}
 			a{text-decoration:none;color:#0A91AB}
 			p{font-size:.875rem;margin-top:2rem}
 			ul{padding-left:1rem}
 			img{width:150px;height:150px;border-radius:50%}
 			h1,header h2{font-family:'Oswald',sans-serif;text-transform:uppercase}
-			header{padding:2rem 0}
+			header{padding-top:2rem;text-align:center}
             header h1{color:#111;font-size:2.625rem;line-height:2.375rem;font-weight:normal;letter-spacing:1px}
 			header h2{color:#999;font-weight:300;letter-spacing:.25rem;font-size:1.25rem;margin-top:1rem}
+			header p{text-align:left}
 			section h1{color:#222;font-weight:400;font-size:1rem;vertical-align:bottom}
 			section h2{font-size:1rem;font-weight:900;text-transform:uppercase}
 			section h3{display:inline;font-size:1rem;font-weight:700;text-transform:uppercase}
 			section div{font-size:.875rem}
 			section div:nth-child(odd) .soft{color:#999}
-			@media (max-width: 727px) {
-				.grid>*{width:100%}
-				.grid>*:nth-child(odd){width:100%;text-align:left}
+			.wrapper{width:100%;max-width:64rem;margin:0 auto;padding:1rem;background:#fff}
+			.grid{font-size:0;margin-bottom:2rem}
+			.grid>*{display:block;vertical-align:top}
+			.grid>*:not(:last-child){margin-bottom:1rem}
+			.grid>*:nth-child(-n+2){padding-top:0}
+			.dt{display:none}
+			.sep{position:relative;border-bottom:2px solid #ccc;vertical-align:bottom;top:-4px}
+			.sep+div{display:none}
+			.date{color:#666}
+			.hidden{display:none}
+			@media print, (min-width: 768px) {
+				body{padding:2rem}
+				header{text-align:left}
+				.wrapper{padding:2rem}
+				.grid>*{width:70%}
+				.grid>*:nth-child(odd){width:30%;text-align:right;padding-right:2rem}
 				.grid>h1{margin-bottom:1rem}
-				.dt,.sep+div{display:none}
-				#header h1, #header h2, body #header figure{text-align:center}
+				.grid>*,.sep+div,.dt{display:inline-block}
 			}
 			@media print{
                 html,body{width:210mm;height:296mm;margin:0;padding:0;-webkit-print-color-adjust:exact;color-adjust:exact;background:#fff}
                 .wrapper{max-width:none;margin:0;padding:0 2rem}
-                .grid > *{margin:0 0 1rem}
 				.page-break-before{page-break-before:always;padding-top:2rem}
 				.page-break-after{page-break-after:always}
+				.grid{margin-bottom:1.5rem}
 			}
 		</style>
 	</head>
 	<body>
         <div class="wrapper">
-            <header id="header" role="banner">
+            <header role="banner">
                 <div class="grid page-break-before">
                     <figure><img src="nuno_pereira.jpg" alt="Nuno Pereira"></figure>
-                    <div >
+                    <div>
                         <h1>Nuno Pereira</h1>
                         <h2>Front-End Developer</h2>
                         <p>
@@ -76,8 +80,7 @@
                         I like to help others solve problems more than doing my own job (unless that's my job).<br>
                         I love deleting code... much feeling, such satisfaction, wow!<br>
                         My superpowers: I am the good kind of weird. I can be really awkward and a pain in the ass (comes in handy when
-                        you need to enforce standards).<br>
-                        <br>
+                        you need to enforce standards).
                     </div>
                 </section>
                 <section class="grid">
@@ -87,8 +90,7 @@
                     <div>
                         I want to save the planet by reducing the web's bloat.<br>
                         I want to save humanity by eliminating the rage caused by shitty websites.<br>
-                        I want to keep my mind busy. I want to untangle stuff.<br>
-                        <br>
+                        I want to keep my mind busy. I want to untangle stuff.
                     </div>
                 </section>
                 <section class="grid page-break-before">
@@ -97,7 +99,7 @@
 					<div class="dt">
 						Where<br>
 						When<br>
-						What<br>
+						What
 					</div>
 					<div>
 						<h2>Bright Pixel, S.A.</h2>
@@ -137,15 +139,14 @@
                         <br>
                         <h3>Bright Pixel</h3> &nbsp; &middot; &nbsp; <a href="https://brpx.com">https://brpx.com</a><br>
 						Bright Pixel is a venture builder studio with both investment and R&D strategies.
-                        I built the company's website with a static site generator and a GitHub powered CMS. I still maintain it.<br>
-                        <br>
+                        I built the company's website with a static site generator and a GitHub powered CMS. I still maintain it.
                     </div>
                 </section>
 				<section class="grid page-break-before">
 					<div class="dt">
                         Where<br>
 						When<br>
-						What<br>
+						What
 					</div>
 					<div>
 						<h2>SAPO</h2>
@@ -181,15 +182,14 @@
                         <br>
                         <h3>SAPO Biz</h3> &nbsp; &middot; &nbsp; <a href="https://biz.sapo.pt">https://biz.sapo.pt</a><br>
 						SAPO Biz was an e-commerce platform for quick online store creation, with several payment processing and logistic services integration.
-                        I was part of the development team and built several components of the store management backoffice.<br>
-                        <br>
+                        I was part of the development team and built several components of the store management backoffice.
 					</div>
                 </section>
                 <section class="grid page-break-before">
                     <div class="dt">
                         Where<br>
-                        What<br>
                         When<br>
+                        What
                     </div>
 					<div>
                         <h2>VIEW / ISOBAR</h2>
@@ -208,13 +208,14 @@
 						<br>
 						<h3>ESAF / GNBGA</h3> &nbsp; &middot; &nbsp; <a href="https://www.esaf.pt">https://www.esaf.pt</a> &nbsp; &middot; &nbsp; <a href="https://www.gnbga.pt/">https://www.gnbga.pt</a><br>
                         Espirito Santo Activos Financeiros now Grupo Novo Banco Gestão de Activos is Novo Banco's fund and investment management platform.
-                        I converted the whole design templates to static HTML and CSS and built several JavaScript components.<br>
-                        <br>
-                    </div>
+                        I converted the whole design templates to static HTML and CSS and built several JavaScript components.
+					</div>
+				</section>
+				<section class="grid">
                     <div class="dt">
                         Where<br>
 						When<br>
-						What<br>
+						What
 					</div>
 					<div>
                         <h2>IOL / MediaCapital</h2>
@@ -225,9 +226,11 @@
 							<li>Interactive rich media ad development</li>
 							<li>Email Marketing development and segmentation targeting</li>
 							<li>Websites and web applications development</li>
-                        </ul><br>
+                        </ul>
 					</div>
-                    <div class="dt">
+				</section>
+				<section class="grid">
+					<div class="dt">
                         Where<br>
 						When<br>
 						What<br>
@@ -239,8 +242,7 @@
 						<ul>
 							<li>Tech and Network support</li>
 							<li>AV equipment support</li>
-                        </ul><br>
-                        <br>
+                        </ul>
 					</div>
 				</section>
                 <section class="grid page-break-before">
@@ -267,14 +269,14 @@
 					<div>
 						I prefer logic but i have a creative side too so, I'm sensible to aesthetics, design and usability.<br>
                         I like to observe humans and study their behaviour. I am very often right about why they do what they do.<br>
-                        I have to try and fail before saying something is impossible.
+						I have to try and fail before saying something is impossible.
 					</div>
 				</section>
 				<section class="grid">
 					<h1>Tools of the trade</h1>
 					<div class="sep"></div>
 					<div>&nbsp;</div>
-					<div>Visual Studio Code, Git, Figma, Sketch, Pixelmator, ImageOptim, SVGOMG, Netlify, Cloudflare</div>
+					<div>Visual Studio Code, Git, Figma, Sketch, Pixelmator, ImageOptim, SVGOMG</div>
 				</section>
 				<section class="grid">
 					<h1>Training</h1>
@@ -283,7 +285,7 @@
                         Where<br>
 						When<br>
 						What<br>
-						Score
+						Average
 					</div>
 					<div>
 						<h2>ETIC - Escola Técnica de Imagem e Comunicação</h2>
