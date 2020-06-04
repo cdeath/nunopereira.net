@@ -10,7 +10,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Lato:400,700,900|Oswald:400,300,700" rel="stylesheet" type="text/css">
 		<style type="text/css">
 			*{box-sizing:border-box;margin:0;padding:0;border:0}
-			.wrapper{width:60rem;margin:2rem auto;padding:2rem;background:#fff}
+			.wrapper{width:100%;max-width:64rem;margin:0 auto;padding:2rem;background:#fff}
 			.grid{font-size:0}
 			.grid>*{display:inline-block;vertical-align:top}
 			.grid>*{width:70%;margin:0 0 2rem}
@@ -19,7 +19,7 @@
 			.sep{position:relative;border-bottom:2px solid #ccc;vertical-align:bottom;top:-4px}
 			.date{color:#666}
 			.hidden{display:none}
-			body{background:#f5f5f5;color:#111;font-family:'Lato',sans-serif;line-height:1.5rem}
+			body{background:#f5f5f5;color:#111;font-family:'Lato',sans-serif;line-height:1.5rem;padding:2rem}
 			a{text-decoration:none;color:#0A91AB}
 			p{font-size:.875rem;margin-top:2rem}
 			ul{padding-left:1rem}
@@ -33,9 +33,16 @@
 			section h3{display:inline;font-size:1rem;font-weight:700;text-transform:uppercase}
 			section div{font-size:.875rem}
 			section div:nth-child(odd) .soft{color:#999}
+			@media (max-width: 727px) {
+				.grid>*{width:100%}
+				.grid>*:nth-child(odd){width:100%;text-align:left}
+				.grid>h1{margin-bottom:1rem}
+				.dt,.sep+div{display:none}
+				#header h1, #header h2, body #header figure{text-align:center}
+			}
 			@media print{
                 html,body{width:210mm;height:296mm;margin:0;padding:0;-webkit-print-color-adjust:exact;color-adjust:exact;background:#fff}
-                .wrapper{width:100%;margin:0;padding:0 2rem}
+                .wrapper{max-width:none;margin:0;padding:0 2rem}
                 .grid > *{margin:0 0 1rem}
 				.page-break-before{page-break-before:always;padding-top:2rem}
 				.page-break-after{page-break-after:always}
@@ -44,7 +51,7 @@
 	</head>
 	<body>
         <div class="wrapper">
-            <header role="banner">
+            <header id="header" role="banner">
                 <div class="grid page-break-before">
                     <figure><img src="nuno_pereira.jpg" alt="Nuno Pereira"></figure>
                     <div >
@@ -87,7 +94,7 @@
                 <section class="grid page-break-before">
 					<h1>What have i been doing?</h1>
 					<div class="sep"></div>
-					<div>
+					<div class="dt">
 						Where<br>
 						When<br>
 						What<br>
@@ -102,7 +109,7 @@
 							<li>Startup mentoring</li>
 						</ul>
 					</div>
-					<div>Worthy</div>
+					<div class="dt">Worthy</div>
 					<div>
                         <h3>PixelsCamp</h3> &nbsp; &middot; &nbsp; <a href="https://pixels.camp">https://pixels.camp</a><br>
                         PixelsCamp is a 3 day tech conference with a 48h hackathon.
@@ -135,7 +142,7 @@
                     </div>
                 </section>
 				<section class="grid page-break-before">
-					<div>
+					<div class="dt">
                         Where<br>
 						When<br>
 						What<br>
@@ -150,7 +157,7 @@
 							<li>Set-Top-Box and Smart TV applications development</li>
 						</ul>
 					</div>
-					<div>Worthy</div>
+					<div class="dt">Worthy</div>
 					<div>
 						<h3>SAPO</h3> &nbsp; &middot; &nbsp; <a href="http://www.sapo.pt">https://www.sapo.pt</a> &nbsp; &middot; &nbsp; <a href="https://www.sapo.ao">https://www.sapo.ao</a> &nbsp; &middot; &nbsp; <a href="http://www.sapo.cv">https://www.sapo.cv</a> &nbsp; &middot; &nbsp; <a href="http://www.sapo.mz">https://www.sapo.mz</a><br>
 						SAPO is a large network of portuguese content websites, with SAPO's homepage being one of the highest traffic websites in Portugal. I was SAPO's homepage sole front-end developer from 2013 to 2016.<br>
@@ -179,7 +186,7 @@
 					</div>
                 </section>
                 <section class="grid page-break-before">
-                    <div>
+                    <div class="dt">
                         Where<br>
                         What<br>
                         When<br>
@@ -192,7 +199,7 @@
 							<li>Websites and web applications development.</li>
 						</ul>
 					</div>
-					<div>Worthy</div>
+					<div class="dt">Worthy</div>
 					<div>
 						<h3>SATA</h3> &nbsp; &middot; &nbsp; <a href="http://www.sata.pt">https://sata.pt</a><br>
                         SATA is an airline company based in the Azores.
@@ -204,7 +211,7 @@
                         I converted the whole design templates to static HTML and CSS and built several JavaScript components.<br>
                         <br>
                     </div>
-                    <div>
+                    <div class="dt">
                         Where<br>
 						When<br>
 						What<br>
@@ -220,7 +227,7 @@
 							<li>Websites and web applications development</li>
                         </ul><br>
 					</div>
-                    <div>
+                    <div class="dt">
                         Where<br>
 						When<br>
 						What<br>
@@ -272,7 +279,7 @@
 				<section class="grid">
 					<h1>Training</h1>
 					<div class="sep"></div>
-					<div>
+					<div class="dt">
                         Where<br>
 						When<br>
 						What<br>
