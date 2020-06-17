@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BarcodeJS™</title>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap" as="style" onload="this.rel='stylesheet'" crossorigin>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body { height: 100% }
+        body { font-family: 'Libre Barcode 128 Text', monospace; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        main:not([style]) { font-size: 1vw; visibility: hidden; }
+    </style>
+</head>
+<body>
+    <main></main>
+    <script>
+        var main = document.querySelector('main');
+        main.innerHTML = new URLSearchParams(location.search).get('text');
+        setTimeout(() => {
+            main.style.fontSize = `${Math.round(window.innerWidth / main.offsetWidth * 0.8)}vmin`;
+        }, 100);
+    </script>
+</body>
+</html>
