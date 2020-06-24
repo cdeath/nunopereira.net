@@ -30,9 +30,7 @@
         var code = new URLSearchParams(location.search).get('text'),
             main = document.querySelector('main');
         main.querySelectorAll('p').forEach(elm => (elm.innerHTML = code));
-        setTimeout(() => {
-            main.style.fontSize = `${Math.round(window.innerWidth / main.offsetWidth * 0.8)}vmin`;
-        }, 300);
+        main.style.fontSize = `${Math.round(window.innerWidth / main.offsetWidth * 0.8)}vmin`;
     </script>
 </body>
 </html>
