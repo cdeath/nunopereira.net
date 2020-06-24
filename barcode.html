@@ -21,10 +21,11 @@
         <p class="barcode128"></p>
     </main>
     <script>
-        var code = new URLSearchParams(location.search).get('text');
-        document.querySelectorAll('p').forEach(elm => (elm.innerHTML = code));
+        var code = new URLSearchParams(location.search).get('text'),
+            main = document.querySelector('main');
+        main.querySelectorAll('p').forEach(elm => (elm.innerHTML = code));
         setTimeout(() => {
-            document.querySelector('main').style.fontSize = `${Math.round(window.innerWidth / main.offsetWidth * 0.8)}vmin`;
+            main.style.fontSize = `${Math.round(window.innerWidth / main.offsetWidth * 0.8)}vmin`;
         }, 300);
     </script>
 </body>
