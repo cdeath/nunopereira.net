@@ -24,7 +24,7 @@
         var code = new URLSearchParams(location.search).get('text');
         document.querySelectorAll('p').forEach(elm => (elm.innerHTML = code));
         setTimeout(() => {
-            main.style.fontSize = `${Math.round(window.innerWidth / main.offsetWidth * 0.8)}vmin`;
+            document.querySelector('main').style.fontSize = `${Math.round(window.innerWidth / main.offsetWidth * 0.8)}vmin`;
         }, 300);
     </script>
 </body>
