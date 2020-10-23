@@ -12,19 +12,30 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Extended+Text&family=Libre+Barcode+128+Text&display=swap">
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        .barcode39 { font-family: 'Libre Barcode 39 Extended Text', monospace; }
-        .barcode128 { font-family: 'Libre Barcode 128 Text', monospace; }
+        .code39 { font-family: 'Libre Barcode 39 Extended Text', monospace; }
+        .code128 { font-family: 'Libre Barcode 128 Text', monospace; }
         html, body { height: 100%; }
-        body { font-family: monospace; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-        main { font-size: 1vw; text-align: center; opacity: 0; transition: opacity .5s; }
+        body, main { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        body { font-family: monospace; }
+        nav { display: flex; }
+        nav a { width: 33.33% }
+        main { flex: 1; font-size: 1vw; text-align: center; opacity: 0; transition: opacity .5s; }
         main[style] { opacity: 1; }
-        main p:not(:last-child) { margin-bottom: 10vh; }
+        main div {}
     </style>
 </head>
 <body>
+    <header>
+        <nav>
+            <a href="#code39">Code 39</a>
+            <a href="#code128">Code 128</a>
+            <a href="#qrcode">QR-Code</a>
+        </nav>
+    </header>
     <main>
-        <p class="barcode39"></p>
-        <p class="barcode128"></p>
+        <div id="code39"></div>
+        <div id="code128"></div>
+        <div id="qrcode"></div>
     </main>
     <script>
         var code = new URLSearchParams(location.search).get('text'),
