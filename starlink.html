@@ -72,10 +72,10 @@
       width: 20rem;
       height: 20rem;
       border: 2px solid var(--indigo);
-      animation: ring 30s linear infinite;
+      animation: aroundtheworld 30s linear infinite;
     }
     .outer-ring .satellite {
-      animation: satellite 30s linear infinite;
+      animation: aroundtheworld 30s linear infinite reverse;
     }
     .outer-ring .satellite:nth-child(1) {
       top: 0;
@@ -97,21 +97,21 @@
       width: 12.5rem;
       height: 12.5rem;
       border: 2px solid var(--pink);
-      animation: ring 15s linear infinite;
+      animation: aroundtheworld 15s linear infinite;
     }
     .inner-ring .satellite {
-      animation: satellite 15s linear infinite;
+      animation: aroundtheworld 15s linear infinite reverse;
     }
     .inner-ring .satellite:nth-child(1) {
       top: 15%;
-      left: 85%;
+      left: 86%;
     }
     .inner-ring .satellite:nth-child(2) {
       top: 85%;
       left: 85%;
     }
     .inner-ring .satellite:nth-child(3) {
-      top: 85%;
+      top: 86%;
       left: 15%;
     }
     .inner-ring .satellite:nth-child(4) {
@@ -122,13 +122,9 @@
       width: 5rem;
       height: 5rem;
     }
-    @keyframes ring {
+    @keyframes aroundtheworld {
       0% { transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, 0deg); }
       100% { transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, 360deg); }
-    }
-    @keyframes satellite {
-      0% { transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, 0deg); }
-      100% { transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, -360deg); }
     }
   </style>
 </head>
